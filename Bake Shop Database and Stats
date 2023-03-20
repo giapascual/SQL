@@ -1,0 +1,32 @@
+-- Design a bake shop data base
+
+CREATE TABLE bakery (id INTEGER PRIMARY KEY, food TEXT, price INTEGER, quantity INTEGER, sweetness INTEGER);
+
+INSERT INTO bakery VALUES (1, "Cookies", 3, 4, 3);
+INSERT INTO bakery VALUES (2, "Cupcakes", 5, 6, 3);
+INSERT INTO bakery VALUES (3, "Macaroons", 2, 5, 4);
+INSERT INTO bakery VALUES (4, "Cream Puffs", 3, 3, 1);
+INSERT INTO bakery VALUES (5, "Croissant", 6, 2, 4);
+INSERT INTO bakery VALUES (6, "Chocolates", 2, 5, 1);
+INSERT INTO bakery VALUES (7, "Chocomallows", 3, 8, 1);
+INSERT INTO bakery VALUES (8, "Cake", 10, 2, 2);
+INSERT INTO bakery VALUES (9, "Sugar Cookie", 1, 5, 3);
+INSERT INTO bakery VALUES (10, "Butter Cookie", 1, 5, 4);
+INSERT INTO bakery VALUES (11, "Granola Bar", 2, 6, 3);
+INSERT INTO bakery VALUES (12, "Banana Bread", 3, 3, 4);
+INSERT INTO bakery VALUES (13, "English Muffin", 2, 5, 5);
+INSERT INTO bakery VALUES (14, "Loaf", 5, 2, 5);
+INSERT INTO bakery VALUES (15, "Gingerbread", 2, 4, 4);
+
+-- Display the database order by price
+SELECT * FROM bakery ORDER BY price;
+
+-- Display the average price of the items in the bake shop
+SELECT AVG(price) FROM bakery;
+
+-- Display the top 5 sweetest pastries in the bake shop
+SELECT food, sweetness FROM bakery ORDER BY sweetness limit 5;
+
+
+
+
